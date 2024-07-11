@@ -1,4 +1,4 @@
-package io.github.lsmcodes.planner.participant;
+package io.github.lsmcodes.planner.participant.controller;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import io.github.lsmcodes.planner.participant.dto.ParticipantData;
+import io.github.lsmcodes.planner.participant.dto.ParticipantRequestPayload;
+import io.github.lsmcodes.planner.participant.model.Participant;
+import io.github.lsmcodes.planner.participant.repository.ParticipantRepository;
 
 @RestController
 @RequestMapping("/participants")

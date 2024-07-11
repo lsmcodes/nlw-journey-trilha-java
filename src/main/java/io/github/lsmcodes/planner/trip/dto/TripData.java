@@ -1,7 +1,9 @@
-package io.github.lsmcodes.planner.trip;
+package io.github.lsmcodes.planner.trip.dto;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
+
+import io.github.lsmcodes.planner.trip.model.Trip;
 
 public record TripData(UUID id, String destination, LocalDateTime startsAt, LocalDateTime endsAt, boolean isConfirmed,
                 String ownerName, String ownerEmail) {

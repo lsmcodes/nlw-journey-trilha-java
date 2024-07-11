@@ -1,6 +1,8 @@
-package io.github.lsmcodes.planner.participant;
+package io.github.lsmcodes.planner.participant.dto;
 
 import java.util.UUID;
+
+import io.github.lsmcodes.planner.participant.model.Participant;
 
 public record ParticipantData(UUID id, String name, String email, boolean isConfirmed) {
 

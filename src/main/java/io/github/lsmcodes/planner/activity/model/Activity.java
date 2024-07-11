@@ -1,8 +1,10 @@
-package io.github.lsmcodes.planner.participant;
+package io.github.lsmcodes.planner.activity.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
-import io.github.lsmcodes.planner.trip.Trip;
+import io.github.lsmcodes.planner.trip.model.Trip;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,34 +19,30 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "participants")
+@Table(name = "activities")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Participant {
+public class Activity {
 
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
         private UUID id;
 
         @Column(nullable = false)
-        private String name;
+        private String title;
 
-        @Column(nullable = false)
-        private String email;
-
-        @Column(name = "is_confirmed", nullable = false)
-        private boolean isConfirmed;
+        @Column(name = "occurs_at", nullable = false)
+        private LocalDateTime occursAt;
 
         @ManyToOne
         @JoinColumn(name = "trip_id", nullable = false)
         private Trip trip;
 
-        public Participant(String email, Trip trip) {
-                this.name = "";
-                this.email = email;
-                this.isConfirmed = false;
+        public Activity(String title, String occursAt, Trip trip) {
+                this.title = title;
+                this.occursAt = LocalDateTime.parse(occursAt, DateTimeFormatter.ISO_DATE_TIME);
                 this.trip = trip;
         }
 

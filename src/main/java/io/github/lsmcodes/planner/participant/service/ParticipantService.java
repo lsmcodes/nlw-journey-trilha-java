@@ -1,4 +1,4 @@
-package io.github.lsmcodes.planner.participant;
+package io.github.lsmcodes.planner.participant.service;
 
 import java.util.List;
 import java.util.UUID;
@@ -6,7 +6,9 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import io.github.lsmcodes.planner.trip.Trip;
+import io.github.lsmcodes.planner.participant.model.Participant;
+import io.github.lsmcodes.planner.participant.repository.ParticipantRepository;
+import io.github.lsmcodes.planner.trip.model.Trip;
 
 @Service
 public class ParticipantService {

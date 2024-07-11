@@ -1,4 +1,4 @@
-package io.github.lsmcodes.planner.trip;
+package io.github.lsmcodes.planner.trip.dto;
 
 import java.util.List;
 

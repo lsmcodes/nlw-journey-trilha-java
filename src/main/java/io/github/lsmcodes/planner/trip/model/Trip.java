@@ -1,9 +1,10 @@
-package io.github.lsmcodes.planner.trip;
+package io.github.lsmcodes.planner.trip.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
+import io.github.lsmcodes.planner.trip.dto.TripRequestPayload;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
